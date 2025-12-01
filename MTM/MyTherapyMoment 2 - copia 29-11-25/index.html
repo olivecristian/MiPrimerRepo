@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Therapy Moment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Therapy Moment</h1>
+
+  <!-- LOGIN -->
+  <div id="login-section">
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="login()">Ingresar</button>
+    <p id="login-result"></p>
+  </div>
+
+  <!-- ENVÍO DE MENSAJES -->
+  <div id="chat-section" style="display: none;">
+    <h2>Enviar mensaje</h2>
+    <select id="receiver-id">
+        <option value="">Seleccioná un destinatario</option>
+    </select>
+    <textarea id="message-content" placeholder="Escribí tu mensaje aquí"></textarea>
+    <button onclick="sendMessage()">Enviar</button>
+    <div id="audio-controls">
+        <p>🎙️ Grabación de audio</p>
+        <button id="start-recording">🎤 Grabar</button>
+        <button id="stop-recording" disabled>⏹️ Detener</button>
+        <p id="recording-status"></p>
+    </div>
+    <p id="message-status"></p>
+  </div>
+
+  <!-- HISTORIAL DE MENSAJES -->
+  <div id="messages-section" style="display: none;">
+    <h2>Historial de mensajes</h2>
+    <div id="messages-list"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
